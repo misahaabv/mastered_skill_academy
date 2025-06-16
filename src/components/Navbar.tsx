@@ -29,7 +29,7 @@ export default function Navbar() {
           <img
             src="/lovable-uploads/b88c3029-d467-4d52-ac73-3d153c8495d2.png"
             alt="Mastered Skill Academy Logo"
-            className="w-36 h-24 md:w-48 md:h-28 object-contain transition-all bg-white rounded"
+            className="w-36 h-24 md:w-48 md:h-28 object-contain transition-all rounded"
             style={{ maxHeight: "112px" }}
             draggable={false}
           />

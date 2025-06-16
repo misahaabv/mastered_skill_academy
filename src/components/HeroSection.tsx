@@ -7,11 +7,11 @@ export default function HeroSection() {
       className="relative py-16 md:py-32 min-h-[75vh] flex items-center justify-center bg-center bg-cover bg-no-repeat"
       style={{
         backgroundImage:
-          "url('/lovable-uploads/0cba6277-e5f7-4b89-a4e6-39e4024aa9a1.png')",
+          "url('/lovable-uploads/background_main.jpeg')",
       }}
     >
       {/* Removed overlay to show image in original color */}
-      <div className="relative z-10 w-full flex flex-col items-center justify-center text-center">
+      <div className="relative z-10 w-full flex flex-col items-center justify-center">
         <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight animate-fade-in drop-shadow">
           Build Real Skills.<br />Get Real Jobs.
         </h1>
