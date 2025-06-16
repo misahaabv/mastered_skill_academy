@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 236 75% 55%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply font-nunito;
+    /* By default, background and text color handled by Tailwind resets */
+  }
+}
+
+/* Custom background/text utilities mapped to CSS vars */
+@layer utilities {
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+  .bg-card {
+    background-color: hsl(var(--card));
+  }
+  .text-card-foreground {
+    color: hsl(var(--card-foreground));
+  }
+  /* Add more if needed */
+}
+
+/* Custom blue overlay drop-down animation for WhySection cards */
+.card-hover-blue::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(57,60,230); /* matches Tailwind's rgb(57,60,230) */
+  border-radius: inherit;
+  transform: scaleY(0);
+  transform-origin: top;
+  /* Update: slower, smoother dropdown animation. */
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+  z-index: 1;
+}
+.card-hover-blue:hover::before,
+.card-hover-blue:focus-visible::before,
+.card-hover-blue:focus::before,
+.card-hover-blue.group:hover::before {
+  transform: scaleY(1);
+}
+
+/* Ensure icon color changes on blue background */
+.card-hover-blue:hover .text-primary,
+.card-hover-blue:focus .text-primary {
+  color: #fff !important;
+}

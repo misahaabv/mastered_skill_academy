@@ -1,0 +1,116 @@
+
+import { Link, useLocation } from "react-router-dom";
+import { Home, Book, Calendar, Users, Contact, Menu } from "lucide-react";
+import { cn } from "@/lib/utils";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+const navLinks = [
+  { label: 'Home', to: '/', icon: Home },
+  { label: 'About', to: '/about', icon: Users },
+  { label: 'Courses', to: '/courses', icon: Book },
+  { label: 'Events', to: '/events', icon: Calendar },
+  { label: 'Placements', to: '/placements', icon: Users },
+  { label: 'Contact Us', to: '/contact', icon: Contact }
+];
+
+export default function Navbar() {
+  const location = useLocation();
+  // Set navbar opacity lower on '/' (landing), normal otherwise
+  const navbarBgClass = location.pathname === "/" ? "bg-white/70" : "bg-white/90";
+
+  return (
+    <nav className={`sticky top-0 ${navbarBgClass} backdrop-blur z-40 border-b shadow-sm transition`}>
+      <div className="container mx-auto flex items-center h-24 md:h-28 px-4">
+        <Link to="/" className="flex items-center justify-center mr-3 select-none focus:outline-none">
+          <img
+            src="/lovable-uploads/b88c3029-d467-4d52-ac73-3d153c8495d2.png"
+            alt="Mastered Skill Academy Logo"
+            className="w-36 h-24 md:w-48 md:h-28 object-contain transition-all bg-white rounded"
+            style={{ maxHeight: "112px" }}
+            draggable={false}
+          />
+        </Link>
+        <div className="flex-grow" />
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex gap-4">
+          {navLinks.map(link => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className={cn(
+                "flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition hover:bg-primary/10",
+                location.pathname === link.to && "text-primary font-bold"
+              )}
+            >
+              <link.icon size={18} className="mr-1" />
+              {link.label}
+            </Link>
+          ))}
+        </div>
+        <a
+          href="https://wa.me/918590097448"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-block ml-8 px-5 py-2 bg-primary text-white rounded font-bold shadow hover:scale-105 transition-transform"
+        >
+          Apply Now
+        </a>
+
+        {/* Mobile Hamburger */}
+        <div className="flex md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <button
+                aria-label="Open navigation menu"
+                className="p-2 rounded border border-gray-200 bg-white text-primary shadow hover:bg-primary/10 transition"
+              >
+                <Menu size={28}/>
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-72 p-0">
+              <div className="flex flex-col h-full">
+                <div className="flex items-center justify-between px-6 py-5 border-b bg-white/90">
+                  <img
+                    src="/lovable-uploads/b88c3029-d467-4d52-ac73-3d153c8495d2.png"
+                    alt="Mastered Skill Academy Logo"
+                    className="w-32 h-18 object-contain bg-white rounded"
+                    style={{ maxHeight: "72px" }}
+                    draggable={false}
+                  />
+                </div>
+                <div className="flex flex-col px-6 py-4 gap-2">
+                  {navLinks.map(link => (
+                    <Link
+                      key={link.to}
+                      to={link.to}
+                      className={cn(
+                        "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition hover:bg-primary/10",
+                        location.pathname === link.to && "text-primary font-bold"
+                      )}
+                    >
+                      <link.icon size={20} className="mr-1" />
+                      {link.label}
+                    </Link>
+                  ))}
+                  <a
+                    href="https://wa.me/918590097448"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 px-4 py-3 bg-primary text-white rounded font-bold text-center shadow hover:scale-105 transition-transform"
+                  >
+                    Apply Now
+                  </a>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </nav>
+  );
+}
