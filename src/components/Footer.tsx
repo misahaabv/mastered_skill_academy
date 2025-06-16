@@ -120,7 +120,7 @@ export default function Footer() {
         <div className="border-t border-white/15 pt-4 flex flex-col md:flex-row justify-between items-center text-sm text-white/50">
           <span>© {new Date().getFullYear()} Mastered Skill Academy. All rights reserved.</span>
           <span>
-            Built with <span className="text-white/80">♥</span> in India.
+            Built by Suhail KTR
           </span>
         </div>
       </div>
