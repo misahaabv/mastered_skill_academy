@@ -11,7 +11,7 @@ export default function HeroSection() {
       }}
     >
       {/* Removed overlay to show image in original color */}
-      <div className="relative z-10 w-full flex flex-col items-center justify-center">
+      <div className="relative z-10 w-full flex flex-col items-center justify-center text-center">
         <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight animate-fade-in drop-shadow">
           Build Real Skills.<br />Get Real Jobs.
         </h1>
