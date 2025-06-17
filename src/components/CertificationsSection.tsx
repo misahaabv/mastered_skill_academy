@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const logos = [
@@ -31,7 +30,7 @@ const logos = [
 
 export default function CertificationsSection() {
   return (
-    <section className="w-full bg-white py-8 px-0 md:px-0 border-t border-b border-gray-200">
+    <section className="w-full bg-[#f5faff] py-8 px-0 md:px-0 border-t border-b border-gray-200">
       <div className="container flex flex-col items-center">
         <h3 className="text-2xl md:text-3xl font-bold mb-6 text-black text-center">
           Certifications

@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -82,7 +81,7 @@ export default function Courses() {
                   href="https://wa.me/918590097448"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-primary text-white px-5 py-2 rounded font-bold hover:scale-105 transition-transform"
+                  className="bg-[#fee11b] text-black px-5 py-2 rounded font-bold hover:bg-[#e6c900] transition-transform"
                 >
                   Apply Now
                 </a>

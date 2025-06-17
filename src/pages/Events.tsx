@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -41,14 +40,14 @@ export default function Events() {
                 <h3 className="text-lg font-bold">{ev.title}</h3>
                 <span className="text-xs bg-primary text-white px-2 py-1 rounded-full">{ev.date}</span>
               </div>
-              {/* <a
+              <a
                 href="https://wa.me/918590097448"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 bg-primary text-white px-5 py-2 rounded font-bold hover:scale-105 transition-transform w-max"
+                className="mt-5 bg-[#fee11b] text-black px-5 py-2 rounded font-bold hover:bg-[#e6c900] transition-transform w-max"
               >
                 Register Now
-              </a> */}
+              </a>
             </div>
           ))}
         </div>

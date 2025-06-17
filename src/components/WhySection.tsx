@@ -1,4 +1,3 @@
-
 import { Users, Book, Calendar, Home, ArrowUp, ArrowDown } from "lucide-react";
 
 const whyPoints = [
@@ -30,7 +29,7 @@ const whyPoints = [
 
 export default function WhySection() {
   return (
-    <section className="container py-20 animate-fade-in">
+    <section className="container py-20 animate-fade-in bg-[#fafbfc]">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
         Why Mastered Skill Academy?
       </h2>
