@@ -5,22 +5,22 @@ import Footer from "@/components/Footer";
 const events = [
   {
     title: "Industrial Visit: Tech Park",
-    date: "Jun 20, 2024",
+    date: "Jun 20, 2025",
     imgAlt: "Industry Visit"
   },
   {
     title: "Workshop: Resume Building",
-    date: "July 7, 2024",
+    date: "July 7, 2025",
     imgAlt: "Resume Workshop"
   },
   {
     title: "Public Speaking Seminar",
-    date: "July 21, 2024",
+    date: "July 21, 2025",
     imgAlt: "Public Speaking"
   },
   {
     title: "Basic Life Support (BLS) Training",
-    date: "Aug 10, 2024",
+    date: "Aug 10, 2025",
     imgAlt: "BLS Training"
   }
 ];
@@ -41,14 +41,14 @@ export default function Events() {
                 <h3 className="text-lg font-bold">{ev.title}</h3>
                 <span className="text-xs bg-primary text-white px-2 py-1 rounded-full">{ev.date}</span>
               </div>
-              <a
+              {/* <a
                 href="https://wa.me/918590097448"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 bg-primary text-white px-5 py-2 rounded font-bold hover:scale-105 transition-transform w-max"
               >
                 Register Now
-              </a>
+              </a> */}
             </div>
           ))}
         </div>
