@@ -9,6 +9,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import CertificationsSection from "@/components/CertificationsSection";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
+import CTAOne from "@/components/CTAOne";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <CTAOne />
         <WhySection />
         <CoursesSection />
         {/* YouTube Videos Section */}
