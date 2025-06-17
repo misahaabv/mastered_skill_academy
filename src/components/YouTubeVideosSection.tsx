@@ -12,7 +12,7 @@ const YOUTUBE_VIDEO_IDS = [
 
 export default function YouTubeVideosSection() {
   return (
-    <section className="container py-16 md:py-24">
+    <section className="container py-16 md:py-14 bg-white">
       <h2 className="text-2xl md:text-3xl font-extrabold mb-8 text-center">
         Explore Our Videos
       </h2>

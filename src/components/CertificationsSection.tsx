@@ -30,14 +30,14 @@ const logos = [
 
 export default function CertificationsSection() {
   return (
-    <section className="w-full bg-[#f5faff] py-8 px-0 md:px-0 border-t border-b border-gray-200">
-      <div className="container flex flex-col items-center">
+    <section className="w-full bg-[#f5faff] py-4 px-0 md:px-0 border-t border-b border-gray-200 mb-0 pb-0">
+      <div className="container flex flex-col items-center mb-0 pb-0">
         <h3 className="text-2xl md:text-3xl font-bold mb-6 text-black text-center">
           Certifications
         </h3>
         <div className="relative w-full overflow-x-hidden">
           <div
-            className="flex items-center gap-8 min-h-[70px]"
+            className="flex items-center gap-8 min-h-[90px]"
             style={{
               // This gives some side padding so logos don't touch edges
               paddingLeft: "2vw",

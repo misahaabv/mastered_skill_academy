@@ -12,7 +12,9 @@ const courseData = [
       "Recruitment & payroll management",
       "Professional communication & leadership",
       "Placement & interview training"
-    ]
+    ],
+    image: "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80",
+    desc: "Comprehensive HR training, workplace skills, and placement readiness."
   },
   {
     title: "Advanced Diploma in Digital Marketing",
@@ -23,7 +25,9 @@ const courseData = [
       "SEO & paid ads mastery",
       "Analytics & reporting",
       "Job-ready portfolio"
-    ]
+    ],
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
+    desc: "Hands-on digital strategies, analytics, and social campaigns."
   },
   {
     title: "Advanced Diploma in Business and Hospital Administration",
@@ -34,7 +38,9 @@ const courseData = [
       "Patient care protocols",
       "Quality & resource management",
       "Placement support"
-    ]
+    ],
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
+    desc: "Hospital management, operations, and leadership skills."
   },
   {
     title: "Diploma Programs in Financial Accounting",
@@ -45,7 +51,9 @@ const courseData = [
       "GST, TDS, and payroll training",
       "Hands-on with industry tools",
       "Placement assistance"
-    ]
+    ],
+    image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+    desc: "Practical accounting, business finance, and industry tools."
   }
 ];
 
@@ -56,32 +64,38 @@ export default function Courses() {
   }, []);
 
   return (
-    <div>
+    <>
       <Navbar />
-      <main className="container py-16 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-6 text-primary">Our Programs</h1>
-        <div className="flex flex-col gap-7">
+      {/* Hero/Intro Section */}
+      <section className="bg-[#fafbfc] py-10 px-4 md:px-0 text-center">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-primary">Our Programs</h1>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+          Explore our career-focused, industry-driven diploma programs designed to get you job-ready with practical skills and real-world experience.
+        </p>
+      </section>
+      {/* Courses Grid */}
+      <section className="py-4 pb-12 bg-[#fafbfc]">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
           {courseData.map((c, i) => (
-            <div key={i} className="bg-primary rounded-lg shadow p-7 mb-4">
-              <div className="flex justify-between items-center">
-                <span className="font-bold text-xl">{c.title}</span>
-                <span className="bg-primary text-white px-3 py-1 rounded-full font-semibold text-xs">{c.duration}</span>
-              </div>
-              <div className="mt-2 text-white text-sm mb-2">
-                <span>Accreditation: {c.accreditation}</span>
-              </div>
-              <ul className="list-disc ml-6 mb-4 text-white">
-                {c.outcomes.map((o, idx) => (
-                  <li key={idx}>{o}</li>
-                ))}
-              </ul>
-              <div className="flex gap-4">
-                {/* <a href="#" className="border border-primary text-primary px-5 py-2 rounded font-bold hover:bg-primary hover:text-white transition">Download Syllabus</a> */}
+            <div key={i} className="bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+              <img src={c.image} alt={c.title} className="w-full h-40 object-cover" />
+              <div className="flex-1 flex flex-col p-6">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="bg-[#fee11b] text-black text-xs px-3 py-1 rounded-full font-bold">{c.duration}</span>
+                  <span className="text-xs text-gray-500 font-semibold">{c.accreditation}</span>
+                </div>
+                <h2 className="text-xl font-bold mb-2 text-primary min-h-[56px]">{c.title}</h2>
+                <p className="text-gray-600 mb-3 text-sm min-h-[48px]">{c.desc}</p>
+                <ul className="list-disc ml-5 mb-4 text-gray-700 text-sm">
+                  {c.outcomes.map((o, idx) => (
+                    <li key={idx}>{o}</li>
+                  ))}
+                </ul>
                 <a
                   href="https://wa.me/918590097448"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#fee11b] text-black px-5 py-2 rounded font-bold hover:bg-[#e6c900] transition-transform"
+                  className="mt-auto bg-[#fee11b] text-black px-5 py-2 rounded font-bold shadow hover:bg-[#e6c900] transition-transform text-center"
                 >
                   Apply Now
                 </a>
@@ -89,8 +103,8 @@ export default function Courses() {
             </div>
           ))}
         </div>
-      </main>
+      </section>
       <Footer />
-    </div>
+    </>
   );
 }

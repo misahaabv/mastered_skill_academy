@@ -1,28 +1,39 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function About() {
   return (
-    <div>
+    <>
       <Navbar />
-      <main className="container py-16 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-6 text-primary">About Mastered Skill Academy</h1>
-        <p className="mb-4 text-lg">
-          <span className="font-semibold">We’re not just an academy, we’re a movement to empower youth with job-ready skills.</span>
-        </p>
-        <ul className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <li className="bg-white rounded-lg shadow px-6 py-4">Scholarships for meritorious students</li>
-          <li className="bg-white rounded-lg shadow px-6 py-4">Low fees & flexible payment plans</li>
-          <li className="bg-white rounded-lg shadow px-6 py-4">Hands-on, practical curriculum</li>
-          <li className="bg-white rounded-lg shadow px-6 py-4">AI-enhanced modern learning tools</li>
-          <li className="bg-white rounded-lg shadow px-6 py-4">Real world instructors—industry professionals</li>
-        </ul>
-        <blockquote className="italic border-l-4 border-primary pl-4 text-gray-700 mt-10">
-          "Our mission is to make career success affordable and practical for every young Indian."
-        </blockquote>
-      </main>
+      <section className="w-full min-h-[60vh] bg-[#1866c1] flex flex-col justify-between relative pb-0">
+        <div className="max-w-2xl mx-auto pt-6 px-4 md:px-0">
+          <h1 className="text-2xl md:text-3xl font-extrabold text-center mb-4 uppercase text-[#fee11b] tracking-wider drop-shadow-lg">
+            About Mastered Skill Academy
+          </h1>
+          <div className="text-white text-base md:text-lg font-medium leading-relaxed mb-6" style={{textShadow: '0 2px 8px rgba(0,0,0,0.12)'}}>
+            <p className="mb-3">
+              Mastered Skill Academy is dedicated to equipping youth with practical, in-demand skills for today's fast-changing job market. We focus on career-ready, accessible courses designed by real industry professionals.
+            </p>
+            <ul className="mb-3 pl-6 list-disc">
+              <li>Scholarships for deserving learners</li>
+              <li>Part-time work opportunities</li>
+              <li>Low fees, high quality</li>
+            </ul>
+            <p>
+              We believe in hands-on, skill-based learning, not just theory. Our programs use the latest technology and AI tools to prepare you for the future.
+            </p>
+          </div>
+        </div>
+        <div className="w-full flex justify-center mt-0">
+          <img
+            src="/lovable-uploads/group photo bg.png"
+            alt="Mastered Skill Academy Team"
+            className="w-full max-w-4xl object-contain drop-shadow-2xl border-4 border-white rounded-2xl"
+            style={{ marginBottom: '-4px' }}
+          />
+        </div>
+      </section>
       <Footer />
-    </div>
+    </>
   );
 }

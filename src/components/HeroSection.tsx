@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function HeroSection() {
   return (
     <section
-      className="relative py-16 md:py-32 min-h-[75vh] flex items-center justify-center bg-center bg-contain bg-no-repeat"
+      className="relative py-16 md:py-32 min-h-[85vh] flex items-center justify-center bg-cover bg-no-repeat"
       style={{
         backgroundImage:
           "url('/lovable-uploads/banner7.svg')",

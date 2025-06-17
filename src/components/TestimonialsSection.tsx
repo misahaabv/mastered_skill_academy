@@ -69,13 +69,13 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="w-full px-0 py-16 animate-fade-in overflow-visible bg-[#fafbfc]">
+    <section className="w-full px-0 py-8 animate-fade-in overflow-visible bg-white">
       {/* Hide scrollbar with custom CSS */}
       <style>{`
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Student Testimonials</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Student Success Stories</h2>
       <div className="relative flex items-center overflow-visible">
         {/* Left Arrow (inside scroll area, overlapping cards) */}
         <button

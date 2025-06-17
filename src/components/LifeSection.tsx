@@ -1,7 +1,7 @@
 
 export default function LifeSection() {
   return (
-    <section className="container py-16 md:py-24 animate-fade-in">
+    <section className="container py-9 md:py-12 animate-fade-in bg-[#f0f2f5]">
       <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Life at Mastered</h2>
       <div className="grid md:grid-cols-3 gap-6">
         <div className="bg-gray-100 rounded-lg overflow-hidden h-52 md:h-64 flex items-center justify-center relative">

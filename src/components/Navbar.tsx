@@ -101,7 +101,7 @@ export default function Navbar() {
                     href="https://wa.me/918590097448"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 px-4 py-3 bg-[#fee11b] text-black rounded font-bold text-center shadow hover:bg-[#e6c900] transition-transform"
+                    className="mt-4 px-4 py-3 bg-[#fee11b] text-gray-500 rounded font-bold text-center shadow hover:bg-[#e6c900] transition-transform"
                   >
                     Apply Now
                   </a>

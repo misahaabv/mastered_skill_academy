@@ -55,7 +55,7 @@ export default function Blog() {
     <>
       <Navbar />
       <div className="min-h-screen bg-[#fafbfc] py-8 px-4 md:px-12">
-        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">Blog</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-primary">Blog</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Left column */}
           <div className="flex flex-col gap-8">
