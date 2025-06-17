@@ -1,6 +1,5 @@
-
 import { Link, useLocation } from "react-router-dom";
-import { Home, Book, Calendar, Users, Contact, Menu } from "lucide-react";
+import { Home, Book, Calendar, Users, Contact, Menu, Newspaper } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Sheet,
@@ -13,6 +12,7 @@ const navLinks = [
   { label: 'About', to: '/about', icon: Users },
   { label: 'Courses', to: '/courses', icon: Book },
   { label: 'Events', to: '/events', icon: Calendar },
+  { label: 'Blog', to: '/blog', icon: Newspaper },
   { label: 'Placements', to: '/placements', icon: Users },
   { label: 'Contact Us', to: '/contact', icon: Contact }
 ];
