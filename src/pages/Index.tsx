@@ -17,7 +17,6 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <CTAOne />
         <WhySection />
         <CoursesSection />
         {/* YouTube Videos Section */}
