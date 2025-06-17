@@ -69,7 +69,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="w-full px-0 py-16 animate-fade-in overflow-visible">
+    <section className="w-full px-0 py-16 animate-fade-in overflow-visible bg-[#fafbfc]">
       {/* Hide scrollbar with custom CSS */}
       <style>{`
         .hide-scrollbar::-webkit-scrollbar { display: none; }

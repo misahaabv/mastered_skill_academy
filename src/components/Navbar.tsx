@@ -56,7 +56,7 @@ export default function Navbar() {
           href="https://wa.me/918590097448"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-block ml-8 px-5 py-2 bg-primary text-white rounded font-bold shadow hover:scale-105 transition-transform"
+          className="hidden md:inline-block ml-8 px-5 py-2 bg-[#fee11b] text-black rounded font-bold shadow hover:bg-[#e6c900] transition-transform"
         >
           Apply Now
         </a>
@@ -101,7 +101,7 @@ export default function Navbar() {
                     href="https://wa.me/918590097448"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 px-4 py-3 bg-primary text-white rounded font-bold text-center shadow hover:scale-105 transition-transform"
+                    className="mt-4 px-4 py-3 bg-[#fee11b] text-black rounded font-bold text-center shadow hover:bg-[#e6c900] transition-transform"
                   >
                     Apply Now
                   </a>

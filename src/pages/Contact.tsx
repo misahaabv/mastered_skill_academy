@@ -24,7 +24,7 @@ export default function Contact() {
             <label className="font-semibold">Message</label>
             <textarea className="w-full border border-gray-300 rounded px-3 py-2 mt-1" placeholder="Type your message..." required></textarea>
           </div>
-          <button type="submit" className="bg-primary text-white px-7 py-2 rounded font-bold hover:scale-105 transition-transform">Send Message</button>
+          <button type="submit" className="bg-[#fee11b] text-black px-7 py-2 rounded font-bold hover:bg-[#e6c900] transition-transform">Send Message</button>
         </form>
         <div className="mb-5">
           <iframe
@@ -50,7 +50,7 @@ export default function Contact() {
             <b>Email:</b> allmasteredskills@gmail.com
           </div>
         </div>
-        <a href="tel:08590097448" className="block text-center bg-primary text-white py-2 rounded font-bold mt-4 hover:scale-105 transition-transform w-full">
+        <a href="tel:08590097448" className="block text-center bg-[#fee11b] text-black py-2 rounded font-bold mt-4 hover:bg-[#e6c900] transition-transform w-full">
           Talk to Us
         </a>
       </main>

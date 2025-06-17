@@ -22,7 +22,7 @@ export default function HeroSection() {
         <div className="flex gap-5 flex-wrap justify-center">
           <Link
             to="/courses"
-            className="bg-primary text-white px-8 py-3 rounded text-lg font-bold shadow hover:scale-105 transition-transform"
+            className="bg-[#fee11b] text-black px-8 py-3 rounded text-lg font-bold shadow hover:bg-[#e6c900] transition-transform"
           >
             Explore Courses
           </Link>
@@ -30,7 +30,7 @@ export default function HeroSection() {
             href="https://wa.me/918590097448"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-primary text-primary px-8 py-3 rounded text-lg font-bold hover:bg-primary hover:text-white transition"
+            className="border-2 border-[#fee11b] text-[#fee11b] px-8 py-3 rounded text-lg font-bold hover:bg-[#fee11b] hover:text-black transition"
           >
             Apply Now
           </a>
