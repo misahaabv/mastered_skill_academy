@@ -39,6 +39,7 @@
   body {
     @apply font-nunito;
     /* By default, background and text color handled by Tailwind resets */
+    overflow-x: hidden;
   }
 }
 

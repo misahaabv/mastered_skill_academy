@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 export default function HeroSection() {
   return (
     <section
-      className="relative py-16 md:py-32 min-h-[85vh] flex items-center justify-center bg-cover bg-no-repeat"
+      className="relative py-16 md:py-32 min-h-[95vh] flex items-center justify-center bg-cover bg-no-repeat"
       style={{
-        backgroundImage:
-          "url('/lovable-uploads/banner7.svg')",
+        backgroundImage: "url('/lovable-uploads/banner7.svg')",
+        backgroundPosition: '-50px center',
       }}
     >
       {/* Removed overlay to show image in original color */}
@@ -32,6 +32,12 @@ export default function HeroSection() {
           </a>
         </div>
       </div>
+      {/* <img
+        src="/lovable-uploads/skill-experts.png"
+        alt="Skill Experts"
+        className="w-full max-w-full mx-auto object-contain block"
+        style={{ display: 'block' }}
+      /> */}
     </section>
   )
 }

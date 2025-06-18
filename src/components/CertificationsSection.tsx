@@ -31,7 +31,7 @@ const logos = [
 export default function CertificationsSection() {
   return (
     <section className="w-full bg-white py-12 px-0 md:px-0 border-t pb-10 pt-8">
-      <div className="container flex flex-col items-center mb-0 pb-0">
+      <div className="max-w-none mx-auto flex flex-col items-center mb-0 pb-0">
         <h3 className="text-2xl md:text-3xl font-bold mb-6 text-black text-center">
           Certifications
         </h3>
