@@ -67,17 +67,26 @@ export default function Courses() {
     <>
       <Navbar />
       {/* Hero/Intro Section */}
-      <section className="bg-[#fafbfc] py-10 px-4 md:px-0 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-primary">Our Programs</h1>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+      <section className="relative bg-gradient-to-r from-[#eaf1fc] via-[#f5faff] to-[#eaf1fc] py-10 px-4 md:px-0 text-center overflow-hidden">
+        {/* Decorative icon and heading */}
+        <div className="flex flex-col items-center justify-center">
+          {/* <span className="text-4xl md:text-5xl mb-2">🎓</span> */}
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-2 text-primary relative">
+            Our Programs
+            <span className="block mx-auto mt-2 w-24 h-2 rounded-full bg-[#fee11b]" />
+          </h1>
+        </div>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8 font-medium">
           Explore our career-focused, industry-driven diploma programs designed to get you job-ready with practical skills and real-world experience.
         </p>
+        {/* Optional: abstract shape or SVG for extra flair */}
+        {/* <svg ... /> */}
       </section>
       {/* Courses Grid */}
       <section className="py-4 pb-12 bg-[#fafbfc]">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
           {courseData.map((c, i) => (
-            <div key={i} className="bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <div key={i} className="bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden hover:shadow-2xl transition-shadow duration-300 hover:outline hover:outline-primary hover:outline-2 hover:outline-offset-2">
               <img src={c.image} alt={c.title} className="w-full h-40 object-cover" />
               <div className="flex-1 flex flex-col p-6">
                 <div className="flex items-center justify-between mb-2">
@@ -95,7 +104,7 @@ export default function Courses() {
                   href="https://wa.me/918590097448"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto bg-[#fee11b] text-black px-5 py-2 rounded font-bold shadow hover:bg-[#e6c900] transition-transform text-center"
+                  className="mt-auto bg-primary text-white px-5 py-2 rounded font-bold shadow hover:bg-white hover:text-primary transition-transform text-center"
                 >
                   Apply Now
                 </a>

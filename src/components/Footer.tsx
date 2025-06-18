@@ -3,7 +3,7 @@ import { Home, Book, Contact } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white mt-20 pt-10 pb-6 border-t border-primary/20">
+    <footer className="bg-primary text-white mt-0 pt-6 pb-6 border-t border-primary/20">
       <div className="container flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center md:items-start">
         <div className="flex flex-col items-center md:items-start w-full md:w-auto mb-6 md:mb-0">
           <div className="flex items-center mb-4">

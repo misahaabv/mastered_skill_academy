@@ -43,8 +43,9 @@ export default function Navbar() {
               key={link.to}
               to={link.to}
               className={cn(
-                "flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition hover:bg-primary/10",
-                location.pathname === link.to && "text-primary font-bold"
+                "flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative",
+                location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
+                "hover:border-b-2 hover:border-primary"
               )}
             >
               <link.icon size={18} className="mr-1" />
@@ -56,7 +57,7 @@ export default function Navbar() {
           href="https://wa.me/918590097448"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-block ml-8 px-5 py-2 bg-[#fee11b] text-black rounded font-bold shadow hover:bg-[#e6c900] transition-transform"
+          className="hidden md:inline-block ml-8 px-5 py-2 bg-primary text-white rounded font-bold shadow hover:bg-primary/90 transition-transform"
         >
           Apply Now
         </a>
@@ -89,8 +90,9 @@ export default function Navbar() {
                       key={link.to}
                       to={link.to}
                       className={cn(
-                        "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition hover:bg-primary/10",
-                        location.pathname === link.to && "text-primary font-bold"
+                        "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative",
+                        location.pathname === link.to && "text-primary font-bold border-b-2 border-[#fee11b]",
+                        "hover:border-b-2 hover:border-[#fee11b]"
                       )}
                     >
                       <link.icon size={20} className="mr-1" />
@@ -101,7 +103,7 @@ export default function Navbar() {
                     href="https://wa.me/918590097448"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 px-4 py-3 bg-[#fee11b] text-gray-500 rounded font-bold text-center shadow hover:bg-[#e6c900] transition-transform"
+                    className="mt-4 px-4 py-3 bg-primary text-white rounded font-bold text-center shadow hover:bg-primary/90 transition-transform"
                   >
                     Apply Now
                   </a>
