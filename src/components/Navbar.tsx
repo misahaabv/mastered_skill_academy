@@ -14,7 +14,7 @@ const navLinks = [
   { label: 'Events', to: '/events', icon: Calendar },
   { label: 'Blog', to: '/blog', icon: Newspaper },
   { label: 'Placements', to: '/placements', icon: Users },
-  { label: 'Contact Us', to: '/contact', icon: Contact }
+  // { label: 'Contact Us', to: '/contact', icon: Contact }
 ];
 
 export default function Navbar() {

@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import WhySection from "@/components/WhySection";
@@ -10,6 +9,7 @@ import Footer from "@/components/Footer";
 import CertificationsSection from "@/components/CertificationsSection";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
 import CTAOne from "@/components/CTAOne";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
@@ -26,6 +26,8 @@ const Index = () => {
         <CTASection />
         {/* Certifications Section */}
         <CertificationsSection />
+        {/* Contact Us Section */}
+        <ContactSection />
       </main>
       <Footer />
     </div>
