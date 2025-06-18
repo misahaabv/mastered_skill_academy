@@ -30,7 +30,7 @@ export default function ContactSection() {
             </div>
             <button type="submit" className="bg-primary text-white px-7 py-2 rounded font-bold hover:bg-primary/90 transition-transform w-full">Send Message</button>
           </form>
-          {/* Contact Info & Map */}
+          {/* Contact Info & Additional Info */}
           <div className="flex-1 flex flex-col gap-6 justify-between">
             <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-4">
               <div className="flex items-center gap-3 text-gray-700">
@@ -49,16 +49,48 @@ export default function ContactSection() {
                 <a href="mailto:allmasteredskills@gmail.com" className="hover:underline">allmasteredskills@gmail.com</a>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-xl mt-4">
-              <iframe
-                title="Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15652.915686314733!2d75.78401258295517!3d11.244563268127708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65995fc8c327b%3A0xe68da9ea7d06dc41!2sMastered%20Eduventures%20LLP!5e0!3m2!1sen!2sin!4v1750211924803!5m2!1sen!2sin"
-                width="100%"
-                height="320"
-                style={{ border: 0, borderRadius: "16px" }}
-                loading="lazy"
-                allowFullScreen
-              ></iframe>
+
+            {/* Business Hours */}
+            <div className="bg-white rounded-2xl shadow-xl p-6">
+              <h3 className="text-lg font-bold text-primary mb-4">Business Hours</h3>
+              <div className="space-y-2 text-gray-700">
+                <div className="flex justify-between">
+                  <span>Monday - Friday</span>
+                  <span className="font-semibold">9:00 AM - 6:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Saturday</span>
+                  <span className="font-semibold">9:00 AM - 4:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Sunday</span>
+                  <span className="font-semibold text-gray-500">Closed</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Newsletter Subscription */}
+            <div className="bg-white rounded-2xl shadow-xl p-6">
+              <h3 className="text-lg font-bold text-primary mb-4">Stay Updated</h3>
+              <p className="text-gray-600 text-sm mb-4">
+                Subscribe to our newsletter for the latest courses, events, and industry insights.
+              </p>
+              <form className="space-y-3">
+                <div>
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email address" 
+                    className="w-full border border-gray-300 hover:border-primary rounded px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary/30 text-sm"
+                    required 
+                  />
+                </div>
+                <button 
+                  type="submit" 
+                  className="w-full bg-primary text-white px-4 py-2 rounded font-bold hover:bg-primary/90 transition-colors text-sm"
+                >
+                  Subscribe Now
+                </button>
+              </form>
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ const navLinks = [
   { label: 'About', to: '/about', icon: Users },
   { label: 'Courses', to: '/courses', icon: Book },
   { label: 'Placements', to: '/placements', icon: Users },
-  { label: 'Contact Us', to: '#contact', icon: Contact, isScroll: true }
+  { label: 'Contact Us', to: '/contact', icon: Contact }
 ];
 
 const exploreLinks = [
@@ -30,32 +30,7 @@ export default function Navbar() {
   const location = useLocation();
   // Set navbar opacity lower on '/' (landing), normal otherwise
   const navbarBgClass = location.pathname === "/" ? "bg-white/70" : "bg-white/90";
-
-  const handleContactClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const renderNavLink = (link: any) => {
-    if (link.isScroll && location.pathname === '/') {
-      return (
-        <button
-          key={link.to}
-          onClick={handleContactClick}
-          className={cn(
-            "flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative",
-            "hover:border-b-2 hover:border-primary"
-          )}
-        >
-          <link.icon size={18} className="mr-1" />
-          {link.label}
-        </button>
-      );
-    }
-    
     return (
       <Link
         key={link.to}
@@ -73,30 +48,14 @@ export default function Navbar() {
   };
 
   const renderMobileNavLink = (link: any) => {
-    if (link.isScroll && location.pathname === '/') {
-      return (
-        <button
-          key={link.to}
-          onClick={handleContactClick}
-          className={cn(
-            "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative w-full text-left",
-            "hover:border-b-2 hover:border-[#fee11b]"
-          )}
-        >
-          <link.icon size={20} className="mr-1" />
-          {link.label}
-        </button>
-        );
-    }
-    
     return (
       <Link
         key={link.to}
         to={link.to}
         className={cn(
           "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative",
-          location.pathname === link.to && "text-primary font-bold border-b-2 border-[#fee11b]",
-          "hover:border-b-2 hover:border-[#fee11b]"
+          location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
+          "hover:border-b-2 hover:border-primary"
         )}
       >
         <link.icon size={20} className="mr-1" />
