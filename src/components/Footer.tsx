@@ -3,8 +3,8 @@ import { Home, Book, Contact } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white mt-0 pt-6 pb-6 border-t border-primary/20">
-      <div className="container flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center md:items-start">
+    <footer className="bg-[#131213] text-white mt-0 pt-6 pb-6 border-t border-primary/20">
+      <div className="container mt-10 flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center md:items-start">
         <div className="flex flex-col items-center md:items-start w-full md:w-auto mb-6 md:mb-0">
           <div className="flex items-center mb-4">
             <img
@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-start w-full md:w-auto mb-6 md:mb-0">
-          <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-white/80">Quick Links</span>
+          <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-primary/80">Quick Links</span>
           <div className="flex flex-col gap-2">
             <Link to="/" className="flex items-center gap-2 text-base text-white hover:text-primary-foreground/70 transition-colors">
               <Home size={18}/> Home
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-start w-full md:w-auto mb-6 md:mb-0">
-          <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-white/80">Contact</span>
+          <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-primary/80">Contact</span>
           <span className="text-base">
             Mini Bypass Rd, Bypass Junction,<br />
             Azhchavattam, Kozhikode, Kerala 673007
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-end w-full md:w-auto gap-3">
-          <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-white/80">Follow Us</span>
+          <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-primary/80">Follow Us</span>
           <div className="flex gap-4">
             <a
               href="https://www.instagram.com/mastered_skill_academy/"
