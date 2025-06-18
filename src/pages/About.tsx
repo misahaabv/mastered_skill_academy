@@ -17,14 +17,9 @@ export default function About() {
         }}
       >
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* <div className="absolute inset-0 bg-black/40"></div> */}
         
         <div className="max-w-3xl mx-auto pt-8 px-4 md:px-0 relative z-10">
-          {/* Decorative line above title */}
-          <div className="flex justify-center mb-4">
-            <div className="w-16 h-0.5 bg-[#fee11b] rounded-full"></div>
-          </div>
-          
           <h1 className="text-2xl md:text-4xl font-black text-center mb-6 uppercase text-white tracking-wider drop-shadow-2xl">
             <span className="text-white">About Us</span>
           </h1>
@@ -36,14 +31,8 @@ export default function About() {
           
           <div className="text-white text-base md:text-lg font-medium leading-relaxed text-center max-w-2xl mx-auto" style={{textShadow: '0 4px 12px rgba(0,0,0,0.3)'}}>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 shadow-2xl">
-              <p className="mb-4 text-lg md:text-xl font-semibold">
-                We are a <span className="text-[#fee11b] font-bold">premier skill development academy</span> dedicated to transforming lives through practical, industry-relevant education.
-              </p>
-              
-              <div className="w-12 h-0.5 bg-[#fee11b] mx-auto mb-4 rounded-full"></div>
-              
-              <p className="text-base md:text-lg">
-                With <span className="text-[#fee11b] font-semibold">affordable fees</span>, <span className="text-[#fee11b] font-semibold">scholarship opportunities</span>, and <span className="text-[#fee11b] font-semibold">guaranteed placement support</span>, we make quality education accessible to every aspiring professional.
+              <p className="text-lg md:text-xl leading-relaxed">
+                We are a <span className="text-[#fee11b] font-bold">premier skill development academy</span> dedicated to transforming lives through practical, industry-relevant education. With <span className="text-[#fee11b] font-semibold">affordable fees</span>, <span className="text-[#fee11b] font-semibold">scholarship opportunities</span>, and <span className="text-[#fee11b] font-semibold">guaranteed placement support</span>, we make quality education accessible to every aspiring professional.
               </p>
             </div>
           </div>
