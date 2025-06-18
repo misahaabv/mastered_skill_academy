@@ -17,7 +17,7 @@ export default function CTAOne() {
             Explore Courses
           </Link>
           <a
-            href="https://wa.me/918590097448"
+            href="https://wa.me/919778166366"
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-primary text-primary px-8 py-3 rounded text-lg font-bold hover:bg-primary hover:text-white transition"

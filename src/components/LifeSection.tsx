@@ -1,31 +1,89 @@
+import { useEffect, useState } from "react";
+
+const campusImages = [
+  "/lovable-uploads/campus life/WhatsApp Image 2025-06-18 at 14.12.52_642dd558.jpg",
+  "/lovable-uploads/campus life/WhatsApp Image 2025-06-18 at 14.12.52_d075580a.jpg",
+  "/lovable-uploads/campus life/WhatsApp Image 2025-06-18 at 14.12.50_03cc3404.jpg",
+  "/lovable-uploads/campus life/WhatsApp Image 2025-06-18 at 14.12.51_592aaaae.jpg",
+  "/lovable-uploads/campus life/WhatsApp Image 2025-06-18 at 14.12.52_308adede.jpg",
+  "/lovable-uploads/campus life/WhatsApp Image 2025-06-18 at 14.12.52_eafb2452.jpg",
+  "/lovable-uploads/campus life/WhatsApp Image 2025-06-18 at 14.12.51_f5a8839e.jpg",
+  "/lovable-uploads/campus life/WhatsApp Image 2025-06-18 at 14.12.51_450b6224.jpg",
+  "/lovable-uploads/campus life/WhatsApp Image 2025-06-18 at 14.12.50_2c4df96e.jpg",
+  "/lovable-uploads/campus life/photo1.jpg",
+  "/lovable-uploads/campus life/WhatsApp Image 2025-06-18 at 14.12.50_d938bcd1.jpg",
+];
+
+// Define a collage layout: array of {rowSpan, colSpan} for each cell
+const collageLayout = [
+  { row: 2, col: 2 }, // big
+  { row: 1, col: 1 },
+  { row: 1, col: 1 },
+  { row: 2, col: 1 },
+  { row: 1, col: 2 },
+  { row: 1, col: 1 },
+  { row: 1, col: 1 },
+  { row: 1, col: 1 },
+  { row: 1, col: 1 },
+];
+
 export default function LifeSection() {
-  const images = [
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80",
-  ];
+  // Only show as many images as collageLayout
+  const [displayImages, setDisplayImages] = useState(() => {
+    const shuffled = [...campusImages].sort(() => Math.random() - 0.5);
+    return collageLayout.map((_, i) => shuffled[i % shuffled.length]);
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDisplayImages((prev) => {
+        // Pick a random index to replace
+        const idx = Math.floor(Math.random() * collageLayout.length);
+        // Pick a random image not currently shown
+        const unused = campusImages.filter((img) => !prev.includes(img));
+        const newImg = unused.length > 0 ? unused[Math.floor(Math.random() * unused.length)] : campusImages[Math.floor(Math.random() * campusImages.length)];
+        const next = [...prev];
+        next[idx] = newImg;
+        return next;
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="bg-[#eaf1fc] py-8 md:py-12 animate-fade-in">
-      <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">Life at Mastered</h2>
-      <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-        Experience vibrant campus life, hands-on learning, and unforgettable moments with friends and mentors. Here are some glimpses of life at Mastered Skill Academy.
-      </p>
-      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-4">
-        {images.map((src, idx) => (
-          <div key={idx} className="overflow-hidden rounded-xl shadow hover:shadow-lg transition-shadow duration-200 hover:outline hover:outline-primary hover:outline-2 hover:outline-offset-2">
-            <img
-              src={src}
-              alt={`Life at Mastered ${idx + 1}`}
-              className="w-full h-40 object-cover rounded-xl transform hover:scale-105 transition-transform duration-200"
-              loading="lazy"
-            />
+    <section className="bg-[#eaf1fc] py-12 animate-fade-in">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16 px-4">
+        {/* Collage Left */}
+        <div className="w-full md:w-1/2 h-96 rounded-3xl overflow-hidden flex items-center justify-center bg-white/40 shadow-lg mb-8 md:mb-0">
+          <div className="w-full h-full grid grid-cols-4 grid-rows-4 gap-1 auto-rows-[40px] md:auto-rows-[60px]">
+            {displayImages.map((src, idx) => {
+              const { row, col } = collageLayout[idx];
+              return (
+                <div
+                  key={idx}
+                  className={`overflow-hidden rounded-xl shadow col-span-${col} row-span-${row}`}
+                  style={{ gridColumn: `span ${col}`, gridRow: `span ${row}` }}
+                >
+                  <img
+                    src={src}
+                    alt={`Life at Mastered ${idx + 1}`}
+                    className="w-full h-full object-cover rounded-xl"
+                    loading="lazy"
+                  />
+                </div>
+              );
+            })}
           </div>
-        ))}
+        </div>
+        {/* Content Right */}
+        <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-3 text-primary">Life at Mastered</h2>
+          <div className="w-16 h-1 bg-[#fee11b] rounded-full mb-6"></div>
+          <p className="text-gray-700 mb-6 text-lg">
+            Experience vibrant campus life, hands-on learning, and unforgettable moments with friends and mentors. Our campus is a hub of creativity, collaboration, and growth—where every day brings new opportunities to learn, connect, and celebrate success together.
+          </p>
+          <p className="text-primary font-semibold text-base md:text-lg">Discover the spirit of Mastered—where learning is an experience, not just a classroom.</p>
+        </div>
       </div>
     </section>
   );

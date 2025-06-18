@@ -16,9 +16,13 @@ import {
 const navLinks = [
   { label: 'Home', to: '/', icon: Home },
   { label: 'About', to: '/about', icon: Users },
-  { label: 'Courses', to: '/courses', icon: Book },
   { label: 'Placements', to: '/placements', icon: Users },
   { label: 'Contact Us', to: '/contact', icon: Contact }
+];
+
+const coursesLinks = [
+  { label: 'All Courses', to: '/courses' },
+  { label: 'Diploma Programs in Finance', to: '/finance-courses' },
 ];
 
 const exploreLinks = [
@@ -81,7 +85,33 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-4">
           {navLinks.map(renderNavLink)}
-          
+
+          {/* Courses Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative hover:border-b-2 hover:border-primary">
+                <span>Courses</span>
+                <ChevronDown size={16} className="transition-transform" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="w-56 mt-2 bg-white/20 backdrop-blur-md border border-white/30 shadow-2xl rounded-xl">
+              {coursesLinks.map((link) => (
+                <DropdownMenuItem key={link.to} asChild>
+                  <Link
+                    to={link.to}
+                    className={cn(
+                      "flex items-center gap-2 px-3 py-2 rounded text-sm font-medium transition",
+                      location.pathname === link.to && "text-primary font-bold bg-primary/10",
+                      "hover:bg-primary/5"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           {/* Explore Dropdown */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -110,7 +140,7 @@ export default function Navbar() {
           </DropdownMenu>
         </div>
         <a
-          href="https://wa.me/918590097448"
+          href="https://wa.me/919778166366"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-block ml-8 px-5 py-2 bg-primary text-white rounded font-bold shadow hover:bg-primary/90 transition-transform"
@@ -142,7 +172,25 @@ export default function Navbar() {
                 </div>
                 <div className="flex flex-col px-6 py-4 gap-2">
                   {navLinks.map(renderMobileNavLink)}
-                  
+
+                  {/* Mobile Courses Dropdown */}
+                  <div className="border-t pt-4 mt-2">
+                    <div className="text-sm font-semibold text-gray-500 mb-2 px-3">Courses</div>
+                    {coursesLinks.map((link) => (
+                      <Link
+                        key={link.to}
+                        to={link.to}
+                        className={cn(
+                          "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative ml-4",
+                          location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
+                          "hover:border-b-2 hover:border-primary"
+                        )}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+
                   {/* Mobile Explore Section */}
                   <div className="border-t pt-4 mt-2">
                     <div className="text-sm font-semibold text-gray-500 mb-2 px-3">Explore</div>
@@ -161,9 +209,9 @@ export default function Navbar() {
                       </Link>
                     ))}
                   </div>
-                  
+
                   <a
-                    href="https://wa.me/918590097448"
+                    href="https://wa.me/919778166366"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-4 px-4 py-3 bg-primary text-white rounded font-bold text-center shadow hover:bg-primary/90 transition-transform"

@@ -20,7 +20,7 @@ const courses = [
   {
     title: "Advanced Diploma in Business and Hospital Administration",
     desc: "Hospital management, operations, and leadership skills.",
-    tag: "4 Months",
+    tag: "6 Months",
     slug: "hospital-admin",
     image: "/lovable-uploads/2d1f1efe-6768-430c-8b94-90f9550a5a6e.png", // Medical professionals/hospital
   },

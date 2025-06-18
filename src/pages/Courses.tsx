@@ -6,7 +6,7 @@ const courseData = [
   {
     title: "International PG Diploma in Business Administration & HR Management",
     duration: "1 Year",
-    accreditation: "Skill India / Glocal",
+    accreditation: "ICEEDS / Glocal / C-tech",
     outcomes: [
       "HR operations & industry exposure",
       "Recruitment & payroll management",
@@ -19,7 +19,7 @@ const courseData = [
   {
     title: "Advanced Diploma in Digital Marketing",
     duration: "4 Months",
-    accreditation: "Jain X / KHDA",
+    accreditation: "ICEEDS / Glocal / C-tech",
     outcomes: [
       "Social media strategy",
       "SEO & paid ads mastery",
@@ -31,8 +31,8 @@ const courseData = [
   },
   {
     title: "Advanced Diploma in Business and Hospital Administration",
-    duration: "4 Months",
-    accreditation: "KHDA / Glocal",
+    duration: "6 Months",
+    accreditation: "ICEEDS / Glocal / C-tech",
     outcomes: [
       "Hospital workflow & operations",
       "Patient care protocols",
@@ -45,7 +45,7 @@ const courseData = [
   {
     title: "Diploma Programs in Financial Accounting",
     duration: "4 Months",
-    accreditation: "Skill India",
+    accreditation: "NSDC / KHDA",
     outcomes: [
       "Business accounting essentials",
       "GST, TDS, and payroll training",
@@ -53,7 +53,8 @@ const courseData = [
       "Placement assistance"
     ],
     image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
-    desc: "Practical accounting, business finance, and industry tools."
+    desc: "Practical accounting, business finance, and industry tools.",
+    isFinanceCourse: true
   }
 ];
 
@@ -100,14 +101,23 @@ export default function Courses() {
                     <li key={idx}>{o}</li>
                   ))}
                 </ul>
-                <a
-                  href="https://wa.me/918590097448"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto bg-primary text-white px-5 py-2 rounded font-bold shadow hover:bg-white hover:text-primary transition-transform text-center"
-                >
-                  Apply Now
-                </a>
+                {c.isFinanceCourse ? (
+                  <a
+                    href="/finance-courses"
+                    className="mt-auto bg-primary text-white px-5 py-2 rounded font-bold shadow hover:bg-white hover:text-primary transition-transform text-center"
+                  >
+                    Know More
+                  </a>
+                ) : (
+                  <a
+                    href="https://wa.me/919778166366"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto bg-primary text-white px-5 py-2 rounded font-bold shadow hover:bg-white hover:text-primary transition-transform text-center"
+                  >
+                    Apply Now
+                  </a>
+                )}
               </div>
             </div>
           ))}

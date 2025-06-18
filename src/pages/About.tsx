@@ -8,7 +8,7 @@ export default function About() {
       
       {/* About Us Section */}
       <section 
-        className="w-full min-h-[90vh] flex flex-col justify-between relative pb-0"
+        className="w-full min-h-[100vh] flex flex-col justify-between relative pb-0"
         style={{
           backgroundImage: "url('/lovable-uploads/aboutus banner.png')",
           backgroundSize: 'cover',
@@ -117,73 +117,89 @@ export default function About() {
       </section>
 
       {/* Our Mentors Section */}
-      <section className="py-16 px-4 md:px-0 bg-gray-50">
+      <section className="py-20 px-4 md:px-0 bg-gradient-to-br from-gray-100 via-white to-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Our Mentors
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-4 tracking-tight drop-shadow">Our Mentors</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Meet the industry experts and professionals who guide our students towards success
             </p>
             <div className="w-24 h-1 bg-[#fee11b] mx-auto rounded-full mt-4"></div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Mentor 1 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-3xl font-bold">G</span>
-                  </div>
-                  <h3 className="text-xl font-bold">Gayathri</h3>
-                  <p className="text-sm opacity-90">Lead Instructor</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="font-bold text-primary mb-2">Digital Marketing Expert</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Specializes in SEO, social media marketing, and content strategy. Has helped 100+ businesses grow their online presence.
-                </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {/* Farhan - Chairman */}
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
+              <img
+                src="/lovable-uploads/mentor photo/farhan .jpg"
+                alt="Farhan"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-7 text-center">
+                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Farhan</h3>
+                <p className="text-primary font-semibold mb-2">Chairman</p>
               </div>
             </div>
 
-            {/* Mentor 2 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-[#fee11b] to-yellow-500 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-3xl font-bold">R</span>
-                  </div>
-                  <h3 className="text-xl font-bold">Rafa</h3>
-                  <p className="text-sm opacity-90">Technical Lead</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="font-bold text-primary mb-2">Full-Stack Developer</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Expert in modern web technologies including React, Node.js, and cloud platforms. Passionate about teaching practical coding skills.
-                </p>
+            {/* Dr Adhil - Managing Director */}
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
+              <img
+                src="/lovable-uploads/mentor photo/dr adhil.jpeg.jpg"
+                alt="Dr Adhil"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-7 text-center">
+                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Dr Adhil</h3>
+                <p className="text-yellow-600 font-semibold mb-2">Managing Director</p>
               </div>
             </div>
 
-            {/* Mentor 3 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-3xl font-bold">S</span>
-                  </div>
-                  <h3 className="text-xl font-bold">Shifa</h3>
-                  <p className="text-sm opacity-90">Career Counselor</p>
-                </div>
+            {/* Ashif Dharmi - CEO */}
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
+              <img
+                src="/lovable-uploads/mentor photo/ashif .jpg"
+                alt="Ashif Dharmi"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-7 text-center">
+                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Ashif Dharmi</h3>
+                <p className="text-green-600 font-semibold mb-2">CEO</p>
               </div>
-              <div className="p-6">
-                <h4 className="font-bold text-primary mb-2">Career Development Specialist</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Helps students navigate career paths, build professional networks, and develop essential soft skills for workplace success.
-                </p>
+            </div>
+
+            {/* Faseeeha - Director */}
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
+              <img
+                src="/lovable-uploads/mentor photo/faseeha miss.jpeg.jpg"
+                alt="Faseeeha"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-7 text-center">
+                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Faseeeha</h3>
+                <p className="text-primary font-semibold mb-2">Director</p>
+              </div>
+            </div>
+
+            {/* Manshad - Director (placeholder image) */}
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
+              <div className="w-full h-64 flex items-center justify-center bg-gray-100 text-4xl font-extrabold text-gray-400">
+                M
+              </div>
+              <div className="p-7 text-center">
+                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Manshad</h3>
+                <p className="text-yellow-600 font-semibold mb-2">Director</p>
+              </div>
+            </div>
+
+            {/* Mishahira - Academic Head */}
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
+              <img
+                src="/lovable-uploads/mentor photo/mishahira .jpg"
+                alt="Mishahira"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-7 text-center">
+                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Mishahira</h3>
+                <p className="text-green-600 font-semibold mb-2">Academic Head</p>
               </div>
             </div>
           </div>

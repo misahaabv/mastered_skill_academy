@@ -36,7 +36,7 @@ export default function HeroSection() {
             Explore Courses
           </Link>
           <a
-            href="https://wa.me/918590097448"
+            href="https://wa.me/919778166366"
             target="_blank"
             rel="noopener noreferrer"
             className="w-60 h-12 flex items-center justify-center bg-white sm:bg-transparent border-2 border-primary sm:border-white text-primary sm:text-white px-8 rounded text-lg font-bold hover:bg-primary hover:text-white sm:hover:bg-white sm:hover:text-black transition"
