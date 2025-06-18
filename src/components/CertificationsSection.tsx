@@ -37,7 +37,7 @@ export default function CertificationsSection() {
         </h3> */}
         <div className="relative w-full overflow-x-hidden">
           <div
-            className="flex items-center gap-8 min-h-[110px]"
+            className="flex items-center gap-16 min-h-[110px]"
             style={{
               // This gives some side padding so logos don't touch edges
               paddingLeft: "2vw",
@@ -45,11 +45,11 @@ export default function CertificationsSection() {
             }}
           >
             <div
-              className="marquee-track flex gap-8"
+              className="marquee-track flex gap-16"
               style={{
                 display: "flex",
                 width: "max-content",
-                animation: "certification-marquee 15s linear infinite"
+                animation: "certification-marquee 20s linear infinite"
               }}
             >
               {[...logos, ...logos].map((logo, i) => (
@@ -78,11 +78,11 @@ export default function CertificationsSection() {
           }
         }
         .marquee-track {
-          animation: certification-marquee 15s linear infinite;
+          animation: certification-marquee 20s linear infinite;
         }
         @media (max-width: 767px) {
           .marquee-track {
-            animation-duration: 8s !important;
+            animation-duration: 12s !important;
           }
         }
         `}
