@@ -10,7 +10,7 @@ export default function LifeSection() {
     "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80",
   ];
   return (
-    <section className="bg-[#fafbfc] py-8 md:py-12 animate-fade-in">
+    <section className="bg-[#eaf1fc] py-8 md:py-12 animate-fade-in">
       <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">Life at Mastered</h2>
       <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
         Experience vibrant campus life, hands-on learning, and unforgettable moments with friends and mentors. Here are some glimpses of life at Mastered Skill Academy.

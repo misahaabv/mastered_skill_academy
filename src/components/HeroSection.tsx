@@ -45,6 +45,12 @@ export default function HeroSection() {
           </a>
         </div>
       </div>
+      {/* <img
+        src="/lovable-uploads/skill-experts.png"
+        alt="Skill Experts"
+        className="w-full max-w-full mx-auto object-contain block"
+        style={{ display: 'block' }}
+      /> */}
     </section>
   )
 }
