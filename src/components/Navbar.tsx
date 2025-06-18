@@ -1,26 +1,109 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Book, Calendar, Users, Contact, Menu, Newspaper } from "lucide-react";
+import { Home, Book, Calendar, Users, Contact, Menu, Newspaper, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const navLinks = [
   { label: 'Home', to: '/', icon: Home },
   { label: 'About', to: '/about', icon: Users },
   { label: 'Courses', to: '/courses', icon: Book },
+  { label: 'Placements', to: '/placements', icon: Users },
+  { label: 'Contact Us', to: '#contact', icon: Contact, isScroll: true }
+];
+
+const exploreLinks = [
   { label: 'Events', to: '/events', icon: Calendar },
   { label: 'Blog', to: '/blog', icon: Newspaper },
-  { label: 'Placements', to: '/placements', icon: Users },
-  // { label: 'Contact Us', to: '/contact', icon: Contact }
 ];
 
 export default function Navbar() {
   const location = useLocation();
   // Set navbar opacity lower on '/' (landing), normal otherwise
   const navbarBgClass = location.pathname === "/" ? "bg-white/70" : "bg-white/90";
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const renderNavLink = (link: any) => {
+    if (link.isScroll && location.pathname === '/') {
+      return (
+        <button
+          key={link.to}
+          onClick={handleContactClick}
+          className={cn(
+            "flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative",
+            "hover:border-b-2 hover:border-primary"
+          )}
+        >
+          <link.icon size={18} className="mr-1" />
+          {link.label}
+        </button>
+      );
+    }
+    
+    return (
+      <Link
+        key={link.to}
+        to={link.to}
+        className={cn(
+          "flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative",
+          location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
+          "hover:border-b-2 hover:border-primary"
+        )}
+      >
+        <link.icon size={18} className="mr-1" />
+        {link.label}
+      </Link>
+    );
+  };
+
+  const renderMobileNavLink = (link: any) => {
+    if (link.isScroll && location.pathname === '/') {
+      return (
+        <button
+          key={link.to}
+          onClick={handleContactClick}
+          className={cn(
+            "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative w-full text-left",
+            "hover:border-b-2 hover:border-[#fee11b]"
+          )}
+        >
+          <link.icon size={20} className="mr-1" />
+          {link.label}
+        </button>
+        );
+    }
+    
+    return (
+      <Link
+        key={link.to}
+        to={link.to}
+        className={cn(
+          "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative",
+          location.pathname === link.to && "text-primary font-bold border-b-2 border-[#fee11b]",
+          "hover:border-b-2 hover:border-[#fee11b]"
+        )}
+      >
+        <link.icon size={20} className="mr-1" />
+        {link.label}
+      </Link>
+    );
+  };
 
   return (
     <nav className={`sticky top-0 ${navbarBgClass} backdrop-blur z-40 border-b shadow-sm transition`}>
@@ -38,20 +121,34 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-4">
-          {navLinks.map(link => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={cn(
-                "flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative",
-                location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
-                "hover:border-b-2 hover:border-primary"
-              )}
-            >
-              <link.icon size={18} className="mr-1" />
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map(renderNavLink)}
+          
+          {/* Explore Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative hover:border-b-2 hover:border-primary">
+                <span>Explore</span>
+                <ChevronDown size={16} className="transition-transform" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="w-48 mt-2 bg-white/20 backdrop-blur-md border border-white/30 shadow-2xl rounded-xl">
+              {exploreLinks.map((link) => (
+                <DropdownMenuItem key={link.to} asChild>
+                  <Link
+                    to={link.to}
+                    className={cn(
+                      "flex items-center gap-2 px-3 py-2 rounded text-sm font-medium transition",
+                      location.pathname === link.to && "text-primary font-bold bg-primary/10",
+                      "hover:bg-primary/5"
+                    )}
+                  >
+                    <link.icon size={16} />
+                    {link.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
         <a
           href="https://wa.me/918590097448"
@@ -85,20 +182,27 @@ export default function Navbar() {
                   />
                 </div>
                 <div className="flex flex-col px-6 py-4 gap-2">
-                  {navLinks.map(link => (
-                    <Link
-                      key={link.to}
-                      to={link.to}
-                      className={cn(
-                        "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative",
-                        location.pathname === link.to && "text-primary font-bold border-b-2 border-[#fee11b]",
-                        "hover:border-b-2 hover:border-[#fee11b]"
-                      )}
-                    >
-                      <link.icon size={20} className="mr-1" />
-                      {link.label}
-                    </Link>
-                  ))}
+                  {navLinks.map(renderMobileNavLink)}
+                  
+                  {/* Mobile Explore Section */}
+                  <div className="border-t pt-4 mt-2">
+                    <div className="text-sm font-semibold text-gray-500 mb-2 px-3">Explore</div>
+                    {exploreLinks.map((link) => (
+                      <Link
+                        key={link.to}
+                        to={link.to}
+                        className={cn(
+                          "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative ml-4",
+                          location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
+                          "hover:border-b-2 hover:border-primary"
+                        )}
+                      >
+                        <link.icon size={20} className="mr-1" />
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                  
                   <a
                     href="https://wa.me/918590097448"
                     target="_blank"

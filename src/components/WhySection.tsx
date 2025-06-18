@@ -29,7 +29,7 @@ const whyPoints = [
 
 export default function WhySection() {
   return (
-    <section className="container py-10 animate-fade-in bg-white">
+    <section className="container py-10 animate-fade-in bg-[#eaf1fc]">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
         Why Mastered Skill Academy?
       </h2>
