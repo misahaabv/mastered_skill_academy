@@ -6,37 +6,37 @@ const financeCourses = [
     title: "GST Accounting",
     desc: "Practical training on GST assessment, accounting, filing, and consultation. Includes manual and computerized accounting, statutory compliances, and business communication.",
     eligibility: "+2/Any graduation, Post graduate, Working Accountants",
-    image: "/lovable-uploads/5a53aae9-0bea-41cc-b738-055aef0aeb7f.png",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Foreign Accounting",
     desc: "Practical training on Gulf VAT, CT & ET, international business documentation, and accounting practices for India & abroad. Includes office software and business communication.",
     eligibility: "+2/Any graduation, Post graduate, Working Accountants",
-    image: "/lovable-uploads/2cfb164c-0c11-40a3-b29a-87bab2856312.png",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Professional Accounting",
     desc: "Covers statutory compliance, GST, income tax, business accounting, and practical training with industry tools for India & abroad.",
     eligibility: "CA & CMAs, Ongoing CA/CMA students, MBA Finance, Working Accountants",
-    image: "/lovable-uploads/b88c3029-d467-4d52-ac73-3d153c8495d2.png",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "CUET",
     desc: "Common University Entrance Test preparation for UG admissions. Covers language, domain-specific, and general test papers (CBT, MCQs).",
     eligibility: "Passed Class 12th",
-    image: "/lovable-uploads/af4d12c8-8be0-43da-8572-67088bc7abaf.png",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "CAT (Certificate in Accounting Technician)",
     desc: "Covers maintenance of accounts, tax returns, GST, customs, export/import documentation, and more.",
     eligibility: "Passed Class 12th",
-    image: "/lovable-uploads/22e21f60-1952-41fc-bb8a-7b06326864e5.png",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "SAP (S/4HANA – FICO/MM)",
     desc: "SAP training with individualized programs, real-life projects, and support from skilled trainers. Includes business communication and office software.",
     eligibility: "Passed Class 12th/Any graduates",
-    image: "/lovable-uploads/40d46434-7166-4a45-bd09-74fc2fe6b680.png",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
   },
 ];
 

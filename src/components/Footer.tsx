@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-start w-full md:w-auto mb-6 md:mb-0">
-          <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-primary/80">Contact</span>
+          <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-white/70">Contact</span>
           <span className="text-base">
             Mini Bypass Rd, Bypass Junction,<br />
             Azhchavattam, Kozhikode, Kerala 673007
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-end w-full md:w-auto gap-3">
-          <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-primary/80">Follow Us</span>
+          <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-white/70">Follow Us</span>
           <div className="flex gap-4">
             <a
               href="https://www.instagram.com/mastered_skill_academy/"

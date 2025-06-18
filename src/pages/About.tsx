@@ -132,7 +132,7 @@ export default function About() {
             {/* Dr Adhil - Managing Director */}
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
               <img
-                src="/lovable-uploads/mentor photo/dr adhil.jpeg.jpg"
+                src="/lovable-uploads/mentor photo/adhil.jpg"
                 alt="Dr Adhil"
                 className="w-full h-64 object-cover"
               />
@@ -158,7 +158,7 @@ export default function About() {
             {/* Faseeeha - Director */}
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
               <img
-                src="/lovable-uploads/mentor photo/faseeha miss.jpeg.jpg"
+                src="/lovable-uploads/mentor photo/faseeha miss.png"
                 alt="Faseeeha"
                 className="w-full h-64 object-cover"
               />
@@ -182,7 +182,7 @@ export default function About() {
             {/* Mishahira - Academic Head */}
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
               <img
-                src="/lovable-uploads/mentor photo/mishahira .jpg"
+                src="/lovable-uploads/mentor photo/mishahira.png"
                 alt="Mishahira"
                 className="w-full h-64 object-cover"
               />
