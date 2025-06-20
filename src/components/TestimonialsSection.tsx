@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Student Success Stories</h2>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-primary mb-12">Student Success Stories</h2>
       <div className="relative flex items-center overflow-visible">
         {/* Left Arrow (inside scroll area, overlapping cards) */}
         <button

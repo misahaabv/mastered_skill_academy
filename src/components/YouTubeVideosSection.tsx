@@ -1,4 +1,3 @@
-
 import React from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
@@ -13,7 +12,7 @@ const YOUTUBE_VIDEO_IDS = [
 export default function YouTubeVideosSection() {
   return (
     <section className="container py-16 md:py-14 bg-white">
-      <h2 className="text-2xl md:text-3xl font-extrabold mb-8 text-center">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-primary mb-12">
         Explore Our Videos
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

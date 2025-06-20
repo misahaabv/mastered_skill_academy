@@ -37,7 +37,7 @@ const courses = [
 export default function CoursesSection() {
   return (
     <section className="container py-10 animate-fade-in bg-[#eaf1fc]">
-      <h2 className="text-3xl md:text-4xl font-bold mb-7 text-center">Courses We Offer</h2>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-primary mb-12">Courses We Offer</h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-7">
         {courses.map((c) => (
           <div

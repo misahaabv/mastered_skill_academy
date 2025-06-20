@@ -123,19 +123,19 @@ export default function Navbar() {
             <DropdownMenuContent align="center" className="w-48 mt-2 bg-white/20 backdrop-blur-md border border-white/30 shadow-2xl rounded-xl">
               {exploreLinks.map((link) => (
                 <DropdownMenuItem key={link.to} asChild>
-                  <Link
-                    to={link.to}
-                    className={cn(
+            <Link
+              to={link.to}
+              className={cn(
                       "flex items-center gap-2 px-3 py-2 rounded text-sm font-medium transition",
                       location.pathname === link.to && "text-primary font-bold bg-primary/10",
                       "hover:bg-primary/5"
-                    )}
-                  >
+              )}
+            >
                     <link.icon size={16} />
-                    {link.label}
-                  </Link>
+              {link.label}
+            </Link>
                 </DropdownMenuItem>
-              ))}
+          ))}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -195,19 +195,19 @@ export default function Navbar() {
                   <div className="border-t pt-4 mt-2">
                     <div className="text-sm font-semibold text-gray-500 mb-2 px-3">Explore</div>
                     {exploreLinks.map((link) => (
-                      <Link
-                        key={link.to}
-                        to={link.to}
-                        className={cn(
+                    <Link
+                      key={link.to}
+                      to={link.to}
+                      className={cn(
                           "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative ml-4",
                           location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
                           "hover:border-b-2 hover:border-primary"
-                        )}
-                      >
-                        <link.icon size={20} className="mr-1" />
-                        {link.label}
-                      </Link>
-                    ))}
+                      )}
+                    >
+                      <link.icon size={20} className="mr-1" />
+                      {link.label}
+                    </Link>
+                  ))}
                   </div>
 
                   <a

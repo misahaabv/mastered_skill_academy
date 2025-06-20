@@ -19,17 +19,14 @@ export default function About() {
         {/* Overlay for better text readability */}
         {/* <div className="absolute inset-0 bg-black/40"></div> */}
         
-        <div className="max-w-3xl mx-auto pt-8 px-4 md:px-0 relative z-10">
-          <h1 className="text-2xl md:text-4xl font-black text-center mb-6 uppercase text-white tracking-wider drop-shadow-2xl">
-            <span className="text-white">About Us</span>
-          </h1>
-          
-          {/* Decorative line below title */}
-          <div className="flex justify-center mb-8">
-            <div className="w-24 h-0.5 bg-[#fee11b] rounded-full"></div>
+        <div className="max-w-6xl mx-auto py-16 px-4 md:px-8 relative z-10">
+          <div className="flex mb-6">
+            <div className="w-20 h-1 bg-[#fee11b] rounded-full"></div>
           </div>
-          
-          <div className="text-white text-base md:text-lg font-medium leading-relaxed text-center max-w-2xl mx-auto" style={{textShadow: '0 4px 12px rgba(0,0,0,0.3)'}}>
+          <h1 className="text-4xl md:text-5xl font-black text-white mb-6 drop-shadow-lg">
+            About <span className="text-[#fee11b]">Us</span>
+          </h1>
+          <div className="text-white text-base md:text-lg font-medium leading-relaxed max-w-3xl">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 shadow-2xl">
               <p className="text-lg md:text-xl leading-relaxed">
                 We are a <span className="text-[#fee11b] font-bold">premier skill development academy</span> dedicated to transforming lives through practical, industry-relevant education. With <span className="text-[#fee11b] font-semibold">affordable fees</span>, <span className="text-[#fee11b] font-semibold">scholarship opportunities</span>, and <span className="text-[#fee11b] font-semibold">guaranteed placement support</span>, we make quality education accessible to every aspiring professional.
@@ -105,108 +102,96 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Mentors Section */}
-      <section className="py-20 px-4 md:px-0 bg-gradient-to-br from-gray-100 via-white to-gray-50">
+      {/* Our Mentors Section - Redesigned */}
+      <section className="py-20 px-4 md:px-0 bg-[#f7faff]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-4 tracking-tight drop-shadow">Our Mentors</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Meet the industry experts and professionals who guide our students towards success
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-4 tracking-tight drop-shadow-sm">
+              Our Mentors
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+              Meet the industry experts and passionate professionals dedicated to guiding our students toward success.
             </p>
-            <div className="w-24 h-1 bg-[#fee11b] mx-auto rounded-full mt-4"></div>
+            <div className="w-24 h-1.5 bg-[#fee11b] mx-auto rounded-full mt-5"></div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {/* Farhan - Chairman */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
-              <img
-                src="/lovable-uploads/mentor photo/farhan .jpg"
-                alt="Farhan"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-7 text-center">
-                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Farhan</h3>
-                <p className="text-primary font-semibold mb-2">Chairman</p>
+            <div className="group text-center">
+              <div className="relative w-60 h-80 mx-auto mb-5">
+                <img
+                  src="/lovable-uploads/mentor photo/farhan .jpg"
+                  alt="Farhan"
+                  className="w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white transition-all duration-300 group-hover:border-primary"
+                />
               </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">Farhan</h3>
+              <p className="text-primary font-semibold text-base">Chairman</p>
             </div>
 
             {/* Dr Adhil - Managing Director */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
-              <img
-                src="/lovable-uploads/mentor photo/adhil.jpg"
-                alt="Dr Adhil"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-7 text-center">
-                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Dr Adhil</h3>
-                <p className="text-yellow-600 font-semibold mb-2">Managing Director</p>
+            <div className="group text-center">
+              <div className="relative w-60 h-80 mx-auto mb-5">
+                <img
+                  src="/lovable-uploads/mentor photo/adhil.jpg"
+                  alt="Dr Adhil"
+                  className="w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white transition-all duration-300 group-hover:border-primary"
+                />
               </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">Dr Adhil</h3>
+              <p className="text-primary font-semibold text-base">Managing Director</p>
             </div>
 
             {/* Ashif Dharmi - CEO */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
-              <img
-                src="/lovable-uploads/mentor photo/ashif .jpg"
-                alt="Ashif Dharmi"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-7 text-center">
-                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Ashif Dharmi</h3>
-                <p className="text-green-600 font-semibold mb-2">CEO</p>
+            <div className="group text-center">
+              <div className="relative w-60 h-80 mx-auto mb-5">
+                <img
+                  src="/lovable-uploads/mentor photo/ashif .jpg"
+                  alt="Ashif Dharmi"
+                  className="w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white transition-all duration-300 group-hover:border-primary"
+                />
               </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">Ashif Dharmi</h3>
+              <p className="text-primary font-semibold text-base">CEO</p>
             </div>
 
             {/* Faseeeha - Director */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
-              <img
-                src="/lovable-uploads/mentor photo/faseeha miss.png"
-                alt="Faseeeha"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-7 text-center">
-                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Faseeeha</h3>
-                <p className="text-primary font-semibold mb-2">Director</p>
+            <div className="group text-center">
+              <div className="relative w-60 h-80 mx-auto mb-5">
+                <img
+                  src="/lovable-uploads/mentor photo/faseeha miss.png"
+                  alt="Faseeeha"
+                  className="w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white transition-all duration-300 group-hover:border-primary"
+                />
               </div>
-            </div>
-
-            {/* Manshad - Director (placeholder image) */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
-              <div className="w-full h-64 flex items-center justify-center bg-gray-100 text-4xl font-extrabold text-gray-400">
-                M
-              </div>
-              <div className="p-7 text-center">
-                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Manshad</h3>
-                <p className="text-yellow-600 font-semibold mb-2">Director</p>
-              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">Faseeeha</h3>
+              <p className="text-primary font-semibold text-base">Director</p>
             </div>
 
             {/* Mishahira - Academic Head */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300 border border-gray-100">
-              <img
-                src="/lovable-uploads/mentor photo/mishahira.png"
-                alt="Mishahira"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-7 text-center">
-                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Mishahira</h3>
-                <p className="text-green-600 font-semibold mb-2">Academic Head</p>
+            <div className="group text-center">
+              <div className="relative w-60 h-80 mx-auto mb-5">
+                <img
+                  src="/lovable-uploads/mentor photo/mishahira.png"
+                  alt="Mishahira"
+                  className="w-full h-full rounded-2xl object-cover shadow-2xl border-4 border-white transition-all duration-300 group-hover:border-primary"
+                />
               </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">Mishahira</h3>
+              <p className="text-primary font-semibold text-base">Academic Head</p>
             </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <div className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-primary mb-4">Join Our Team</h3>
-              <p className="text-gray-600 mb-6">
-                We're always looking for passionate professionals to join our mentoring team. If you have expertise to share and want to make a difference, we'd love to hear from you.
-              </p>
-              <button className="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors">
-                Become a Mentor
-              </button>
+            
+            {/* Manshad - Director (placeholder) */}
+            <div className="group text-center">
+              <div className="relative w-60 h-80 mx-auto mb-5 flex items-center justify-center bg-gray-200 rounded-2xl shadow-2xl border-4 border-white transition-all duration-300 group-hover:border-primary">
+                 <span className="text-5xl font-extrabold text-gray-400">M</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">Manshad</h3>
+              <p className="text-primary font-semibold text-base">Director</p>
             </div>
           </div>
         </div>
       </section>
-
+      
       <Footer />
     </>
   );

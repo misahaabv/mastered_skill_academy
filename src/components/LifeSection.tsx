@@ -76,9 +76,13 @@ export default function LifeSection() {
           </div>
         </div>
         {/* Content Right */}
-        <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-3 text-primary">Life at Mastered</h2>
-          <div className="w-16 h-1 bg-[#fee11b] rounded-full mb-6"></div>
+        <div className="flex-1 flex flex-col justify-center items-start text-left">
+          <div className="flex mb-6">
+            <div className="w-20 h-1 bg-[#fee11b] rounded-full"></div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+            Life at <span className="text-primary">Mastered</span>
+          </h2>
           <p className="text-gray-700 mb-6 text-lg">
             Experience vibrant campus life, hands-on learning, and unforgettable moments with friends and mentors. Our campus is a hub of creativity, collaboration, and growth—where every day brings new opportunities to learn, connect, and celebrate success together.
           </p>
