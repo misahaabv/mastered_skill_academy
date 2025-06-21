@@ -15,8 +15,8 @@ import {
 
 const navLinks = [
   { label: 'Home', to: '/', icon: Home },
-  { label: 'Placements', to: '/placements', icon: Users },
   { label: 'About', to: '/about', icon: Users },
+  { label: 'Placements', to: '/placements', icon: Users },
   { label: 'Contact Us', to: '/contact', icon: Contact }
 ];
 
@@ -32,41 +32,37 @@ const exploreLinks = [
 
 export default function Navbar() {
   const location = useLocation();
-  // Set navbar opacity lower on '/' (landing), normal otherwise
   const navbarBgClass = location.pathname === "/" ? "bg-white/70" : "bg-white/90";
-  const renderNavLink = (link: any) => {
-    return (
-      <Link
-        key={link.to}
-        to={link.to}
-        className={cn(
-          "flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative",
-          location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
-          "hover:border-b-2 hover:border-primary"
-        )}
-      >
-        <link.icon size={18} className="mr-1" />
-        {link.label}
-      </Link>
-    );
-  };
 
-  const renderMobileNavLink = (link: any) => {
-    return (
-      <Link
-        key={link.to}
-        to={link.to}
-        className={cn(
-          "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative",
-          location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
-          "hover:border-b-2 hover:border-primary"
-        )}
-      >
-        <link.icon size={20} className="mr-1" />
-        {link.label}
-      </Link>
-    );
-  };
+  const renderNavLink = (link: any) => (
+    <Link
+      key={link.to}
+      to={link.to}
+      className={cn(
+        "flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative",
+        location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
+        "hover:border-b-2 hover:border-primary"
+      )}
+    >
+      <link.icon size={18} className="mr-1" />
+      {link.label}
+    </Link>
+  );
+
+  const renderMobileNavLink = (link: any) => (
+    <Link
+      key={link.to}
+      to={link.to}
+      className={cn(
+        "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative",
+        location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
+        "hover:border-b-2 hover:border-primary"
+      )}
+    >
+      <link.icon size={20} className="mr-1" />
+      {link.label}
+    </Link>
+  );
 
   return (
     <nav className={`sticky top-0 ${navbarBgClass} backdrop-blur z-40 border-b shadow-sm transition`}>
@@ -84,7 +80,8 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-4">
-          {navLinks.map(renderNavLink)}
+          {renderNavLink(navLinks[0])} {/* Home */}
+          {renderNavLink(navLinks[1])} {/* About */}
 
           {/* Courses Dropdown */}
           <DropdownMenu>
@@ -123,22 +120,26 @@ export default function Navbar() {
             <DropdownMenuContent align="center" className="w-48 mt-2 bg-white/20 backdrop-blur-md border border-white/30 shadow-2xl rounded-xl">
               {exploreLinks.map((link) => (
                 <DropdownMenuItem key={link.to} asChild>
-            <Link
-              to={link.to}
-              className={cn(
+                  <Link
+                    to={link.to}
+                    className={cn(
                       "flex items-center gap-2 px-3 py-2 rounded text-sm font-medium transition",
                       location.pathname === link.to && "text-primary font-bold bg-primary/10",
                       "hover:bg-primary/5"
-              )}
-            >
+                    )}
+                  >
                     <link.icon size={16} />
-              {link.label}
-            </Link>
+                    {link.label}
+                  </Link>
                 </DropdownMenuItem>
-          ))}
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
+
+          {renderNavLink(navLinks[2])} {/* Placements */}
+          {renderNavLink(navLinks[3])} {/* Contact Us */}
         </div>
+
         <a
           href="https://wa.me/919778166366"
           target="_blank"
@@ -156,7 +157,7 @@ export default function Navbar() {
                 aria-label="Open navigation menu"
                 className="p-2 rounded border border-gray-200 bg-white text-primary shadow hover:bg-primary/10 transition"
               >
-                <Menu size={28}/>
+                <Menu size={28} />
               </button>
             </SheetTrigger>
             <SheetContent side="right" className="w-72 p-0">
@@ -171,7 +172,8 @@ export default function Navbar() {
                   />
                 </div>
                 <div className="flex flex-col px-6 py-4 gap-2">
-                  {navLinks.map(renderMobileNavLink)}
+                  {renderMobileNavLink(navLinks[0])} {/* Home */}
+                  {renderMobileNavLink(navLinks[1])} {/* About */}
 
                   {/* Mobile Courses Dropdown */}
                   <div className="border-t pt-4 mt-2">
@@ -195,20 +197,23 @@ export default function Navbar() {
                   <div className="border-t pt-4 mt-2">
                     <div className="text-sm font-semibold text-gray-500 mb-2 px-3">Explore</div>
                     {exploreLinks.map((link) => (
-                    <Link
-                      key={link.to}
-                      to={link.to}
-                      className={cn(
+                      <Link
+                        key={link.to}
+                        to={link.to}
+                        className={cn(
                           "flex items-center gap-2 px-3 py-3 rounded text-base font-medium transition relative ml-4",
                           location.pathname === link.to && "text-primary font-bold border-b-2 border-primary",
                           "hover:border-b-2 hover:border-primary"
-                      )}
-                    >
-                      <link.icon size={20} className="mr-1" />
-                      {link.label}
-                    </Link>
-                  ))}
+                        )}
+                      >
+                        <link.icon size={20} className="mr-1" />
+                        {link.label}
+                      </Link>
+                    ))}
                   </div>
+
+                  {renderMobileNavLink(navLinks[2])} {/* Placements */}
+                  {renderMobileNavLink(navLinks[3])} {/* Contact Us */}
 
                   <a
                     href="https://wa.me/919778166366"
