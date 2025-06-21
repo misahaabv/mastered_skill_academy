@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Book, Calendar, Users, Contact, Menu, Newspaper, ChevronDown } from "lucide-react";
+import { Home, Book, Calendar, Users, Contact, Menu, Newspaper, ChevronDown, Briefcase, BookOpen, Compass } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Sheet,
@@ -16,7 +16,7 @@ import {
 const navLinks = [
   { label: 'Home', to: '/', icon: Home },
   { label: 'About', to: '/about', icon: Users },
-  { label: 'Placements', to: '/placements', icon: Users },
+  { label: 'Placements', to: '/placements', icon: Briefcase },
   { label: 'Contact Us', to: '/contact', icon: Contact }
 ];
 
@@ -87,6 +87,7 @@ export default function Navbar() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button className="flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative hover:border-b-2 hover:border-primary">
+                <BookOpen size={18} className="mr-1" />
                 <span>Courses</span>
                 <ChevronDown size={16} className="transition-transform" />
               </button>
@@ -113,6 +114,7 @@ export default function Navbar() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button className="flex items-center gap-1 px-4 py-2 rounded text-base font-medium transition relative hover:border-b-2 hover:border-primary">
+                <Compass size={18} className="mr-1" />
                 <span>Explore</span>
                 <ChevronDown size={16} className="transition-transform" />
               </button>
