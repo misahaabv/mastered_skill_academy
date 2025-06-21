@@ -15,8 +15,8 @@ import {
 
 const navLinks = [
   { label: 'Home', to: '/', icon: Home },
-  { label: 'About', to: '/about', icon: Users },
   { label: 'Placements', to: '/placements', icon: Users },
+  { label: 'About', to: '/about', icon: Users },
   { label: 'Contact Us', to: '/contact', icon: Contact }
 ];
 

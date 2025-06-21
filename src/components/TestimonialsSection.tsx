@@ -26,14 +26,14 @@ const testimonials = [
     image: "/lovable-uploads/gayathri.png", // Google review avatar
   },
   {
-    name: "Gayathri R S.",
-    quote: "Best institute for business administration in Calicut",
-    image: "/lovable-uploads/gayathri.png", // Google review avatar
+    name: "Shifana S.",
+    quote: "Mastered Skill Academy is the best Business Administration and Management institution in Kozhikode.Their practical training and expert faculty helped me grow professionally.Highly recommended for anyone looking to build a strong career in business.",
+    image: "/lovable-uploads/shifa.png", // Google review avatar
   },
   {
-    name: "Gayathri R S.",
-    quote: "Best institute for business administration in Calicut",
-    image: "/lovable-uploads/gayathri.png", // Google review avatar
+    name: "Rifa Fathima.",
+    quote: "As a student, I found it to be the best Business Administration and Management institution in Kozhikode.The teaching methods are modern, and the support is outstanding.Great place to learn real business skills and leadership.",
+    image: "/lovable-uploads/rafa.png", // Google review avatar
   },
 ];
 
@@ -76,20 +76,10 @@ export default function TestimonialsSection() {
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
       <h2 className="text-3xl md:text-4xl font-extrabold text-center text-primary mb-12">Student Success Stories</h2>
-      <div className="relative flex items-center overflow-visible">
-        {/* Left Arrow (inside scroll area, overlapping cards) */}
-        <button
-          aria-label="Scroll left"
-          onClick={() => scroll("left")}
-          className="z-50 bg-primary text-white shadow-lg rounded-full p-3 m-0 focus:outline-none flex items-center justify-center -ml-6"
-          style={{ width: 48, height: 48, fontSize: 32, position: 'relative' }}
-        >
-          <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-        </button>
-        {/* Scrollable Cards (no manual scroll) */}
+      <div className="relative px-4 md:px-12">
         <div
           ref={scrollRef}
-          className="flex flex-nowrap gap-6 overflow-x-auto hide-scrollbar pb-4 md:pb-0 snap-x snap-mandatory w-full pointer-events-none px-8 md:px-16"
+          className="flex flex-nowrap gap-6 overflow-x-auto hide-scrollbar pb-4 snap-x snap-mandatory w-full pointer-events-none"
           style={{ scrollBehavior: "smooth" }}
         >
           {testimonials.map((ts, idx) => (
@@ -125,14 +115,20 @@ export default function TestimonialsSection() {
             </div>
           ))}
         </div>
-        {/* Right Arrow (inside scroll area, overlapping cards) */}
+        {/* Navigation Arrows */}
+        <button
+          aria-label="Scroll left"
+          onClick={() => scroll("left")}
+          className="absolute top-1/2 -translate-y-1/2 left-0 z-10 bg-primary text-white shadow-lg rounded-full p-2 focus:outline-none flex items-center justify-center"
+        >
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        </button>
         <button
           aria-label="Scroll right"
           onClick={() => scroll("right")}
-          className="z-50 bg-primary text-white shadow-lg rounded-full p-3 m-0 focus:outline-none flex items-center justify-center -mr-6"
-          style={{ width: 48, height: 48, fontSize: 32, position: 'relative' }}
+          className="absolute top-1/2 -translate-y-1/2 right-0 z-10 bg-primary text-white shadow-lg rounded-full p-2 focus:outline-none flex items-center justify-center"
         >
-          <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
         </button>
       </div>
     </section>

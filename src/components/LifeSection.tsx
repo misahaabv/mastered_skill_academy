@@ -79,7 +79,7 @@ export default function LifeSection() {
         <div className="flex-1 flex flex-col justify-center items-start text-left">
           <div className="flex mb-6">
             <div className="w-20 h-1 bg-[#fee11b] rounded-full"></div>
-          </div>
+        </div>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
             Life at <span className="text-primary">Mastered</span>
           </h2>
