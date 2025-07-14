@@ -4,6 +4,19 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -39,7 +52,6 @@
   body {
     @apply font-nunito;
     /* By default, background and text color handled by Tailwind resets */
-    overflow-x: hidden;
   }
 }
 

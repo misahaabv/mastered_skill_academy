@@ -68,20 +68,18 @@ export default function Courses() {
     <>
       <Navbar />
       {/* Hero/Intro Section */}
-      <section className="relative bg-gradient-to-r from-[#eaf1fc] via-[#f5faff] to-[#eaf1fc] py-10 px-4 md:px-0 text-center overflow-hidden">
-        {/* Decorative icon and heading */}
-        <div className="flex flex-col items-center justify-center">
-          {/* <span className="text-4xl md:text-5xl mb-2">🎓</span> */}
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-2 text-primary relative">
-            Our Programs
-            <span className="block mx-auto mt-2 w-24 h-2 rounded-full bg-[#fee11b]" />
+      <section className="bg-gradient-to-r from-[#eaf1fc] via-[#f5faff] to-[#eaf1fc] py-16 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex mb-6">
+            <div className="w-20 h-1 bg-[#fee11b] rounded-full"></div>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+            Our <span className="text-primary">Programs</span>
           </h1>
+          <p className="text-lg text-gray-700 max-w-3xl">
+            Explore our career-focused, industry-driven diploma programs designed to get you job-ready with practical skills and real-world experience.
+          </p>
         </div>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8 font-medium">
-          Explore our career-focused, industry-driven diploma programs designed to get you job-ready with practical skills and real-world experience.
-        </p>
-        {/* Optional: abstract shape or SVG for extra flair */}
-        {/* <svg ... /> */}
       </section>
       {/* Courses Grid */}
       <section className="py-4 pb-12 bg-[#fafbfc]">
