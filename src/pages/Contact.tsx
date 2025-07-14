@@ -131,9 +131,8 @@ export default function Contact() {
                 <div className="flex items-center gap-3 text-gray-700">
                   <MapPin className="text-primary" />
                   <span>
-                    Mini Bypass Rd, Bypass Junction,
-                    <br />
-                    Azhchavattam, Kozhikode, Kerala 673007
+                    Room No. 35/2145 VK Tower, Valayanadu, Mankavu, <br/>
+                    Kozhikode, Kerala, 673007
                   </span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-700">
