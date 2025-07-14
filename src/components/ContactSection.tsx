@@ -124,7 +124,7 @@ export default function ContactSection() {
                 <MapPin className="text-primary" />
                 <span>
                   Room No. 35/2145 VK Tower, <br/>
-                  Valayanadu, Mankavu Kozhikode </br>
+                  Valayanadu, Mankavu Kozhikode <br/>
                   Kerala, 673007
                 </span>
               </div>
