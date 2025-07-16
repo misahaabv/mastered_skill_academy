@@ -26,6 +26,21 @@ const logos = [
     alt: "Council for Technology & Science Skills",
     height: 60,
   },
+  {
+    src: "/lovable-uploads/ISO_cert.png",
+    alt: "Internation Standard Organization 9001:2015 Logo",
+    height: 60,
+  },
+  {
+    src: "/lovable-uploads/IAF_cert.png",
+    alt: "International Accreditation Forum Logo",
+    height: 60,
+  },
+  {
+    src: "/lovable-uploads/EIAC_cert.png",
+    alt: "EIAC Logo",
+    height: 60,
+  }
 ];
 
 export default function CertificationsSection() {
@@ -52,7 +67,7 @@ export default function CertificationsSection() {
                 animation: "certification-marquee 20s linear infinite"
               }}
             >
-              {[...logos, ...logos].map((logo, i) => (
+              {[...logos, ...logos, ...logos].map((logo, i) => (
                 <img
                   key={i}
                   src={logo.src}
