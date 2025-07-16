@@ -2,21 +2,6 @@ import React from "react";
 
 const logos = [
   {
-    src: "/lovable-uploads/a4e9235c-972a-4c98-bde7-52c47f155187.png",
-    alt: "Skill India",
-    height: 60,
-  },
-  {
-    src: "/lovable-uploads/40d46434-7166-4a45-bd09-74fc2fe6b680.png",
-    alt: "NSDC",
-    height: 60,
-  },
-  {
-    src: "/lovable-uploads/f0624361-be95-4dc5-923f-b91d7810a5fc.png",
-    alt: "Glocal University",
-    height: 60,
-  },
-  {
     src: "/lovable-uploads/af4d12c8-8be0-43da-8572-67088bc7abaf.png",
     alt: "iCEEDS",
     height: 60,
