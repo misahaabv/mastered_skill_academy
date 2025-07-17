@@ -79,7 +79,7 @@ export default function Navbar() {
         <div className="flex-grow" />
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-4">
+        <div className="hidden lg:flex gap-4">
           {renderNavLink(navLinks[0])} {/* Home */}
           {renderNavLink(navLinks[1])} {/* About */}
 
@@ -146,13 +146,13 @@ export default function Navbar() {
           href="https://wa.me/919778166366"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-block ml-8 px-5 py-2 bg-primary text-white rounded font-bold shadow hover:bg-primary/90 transition-transform"
+          className="hidden lg:inline-block ml-8 px-5 py-2 bg-primary text-white rounded font-bold shadow hover:bg-primary/90 transition-transform"
         >
           Apply Now
         </a>
 
-        {/* Mobile Hamburger */}
-        <div className="flex md:hidden">
+        {/* Mobile/Tablet Hamburger */}
+        <div className="flex lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
               <button

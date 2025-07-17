@@ -3,7 +3,7 @@ export default function AboutUsSection() {
       <section className="py-20 px-4 md:px-0 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left Side - Content */}
             <div className="space-y-8">
               {/* Section Header */}
