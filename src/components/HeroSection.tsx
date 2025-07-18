@@ -8,13 +8,13 @@ export default function HeroSection() {
         <img 
           src="/lovable-uploads/mobile-banner8.jpg"
           alt="Hero Banner"
-          className="w-full h-auto object-contain block lg:hidden"
+          className="w-full h-auto object-contain block sm:hidden"
         />
         {/* Tablet Background */}
         <div 
           className="absolute inset-0 bg-cover bg-no-repeat bg-center hidden sm:block lg:hidden"
           style={{
-            backgroundImage: "url('/lovable-uploads/banner7.svg')",
+            backgroundImage: "url('/lovable-uploads/mobile-banner8.jpg')",
           }}
         />
         
