@@ -129,11 +129,11 @@ export default function Contact() {
             <div className="flex-1 flex flex-col gap-6 justify-between">
               <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-gray-700">
-                  <MapPin className="text-primary w-10 h-10" />
+                  <MapPin className="text-primary w-12 h-12 sm:w-10 sm:h-10" />
                   <span className="text-base text-l md:text-left">
-                  MASTERED EDUVENTURES LLP ROOM NO 34/698, <br/>
-                  PATTELTHAZHAM, Mankavu, Kozhikode City Town Police Station,Kozhikode, Kerala, 673007<br/>
-                </span>
+                    MASTERED EDUVENTURES LLP ROOM NO 34/698, <br />
+                    PATTELTHAZHAM, Mankavu, Kozhikode City Town Police Station, Kozhikode, Kerala, 673007<br />
+                  </span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-700">
                   <Phone className="text-primary" />
