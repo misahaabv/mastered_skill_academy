@@ -36,10 +36,11 @@ export default function Footer() {
 
         <div className="flex flex-col items-center md:items-start w-full md:w-auto mb-6 md:mb-0">
           <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-white/70">Contact</span>
-          <span className="text-base">
+          <span className="text-base text-center md:text-left">
             MASTERED EDUVENTURES LLP <br/>
-            Room No. 35/2145 VK Tower, Valayanadu, Mankavu, <br/>
-            Kozhikode, Kerala, 673007
+            ROOM NO 34/698, PATTELTHAZHAM,<br/>
+            Mankavu, Kozhikode City Town Police Station, Kozhikode,<br/>
+            Kozhikode- 673007, Kerala, India
           </span>
           <span className="text-base mt-1">+91 9778166366</span>
           <span className="text-base">allmasteredskills@gmail.com</span>

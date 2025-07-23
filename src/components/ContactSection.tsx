@@ -123,9 +123,8 @@ export default function ContactSection() {
               <div className="flex items-center gap-3 text-gray-700">
                 <MapPin className="text-primary" />
                 <span>
-                  Room No. 35/2145 VK Tower, <br/>
-                  Valayanadu, Mankavu Kozhikode <br/>
-                  Kerala, 673007
+                  MASTERED EDUVENTURES LLP ROOM NO 34/698, <br/>
+                  PATTELTHAZHAM, Mankavu, Kozhikode City Town Police Station,Kozhikode, Kerala, 673007<br/>
                 </span>
               </div>
               <div className="flex items-center gap-3 text-gray-700">
