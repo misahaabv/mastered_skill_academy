@@ -123,8 +123,9 @@ export default function ContactSection() {
               <div className="flex items-center gap-3 text-gray-700">
                 <MapPin className="text-primary w-10 h-10" />
                 <span>
-                  MASTERED EDUVENTURES LLP ROOM NO 34/698, <br/>
-                  PATTELTHAZHAM, Mankavu, Kozhikode City Town Police Station,Kozhikode, Kerala, 673007<br/>
+                  MASTERED EDUVENTURES LLP<br/>
+                  Room No. 35/2145 VK Tower, Valayanadu, Mankavu,<br/>
+                  Kozhikode, Kerala, 673007<br/>
                 </span>
               </div>
               <div className="flex items-center gap-3 text-gray-700">

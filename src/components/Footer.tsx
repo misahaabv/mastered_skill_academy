@@ -38,9 +38,8 @@ export default function Footer() {
           <span className="uppercase tracking-widest text-sm mb-2 font-semibold text-white/70">Contact</span>
           <span className="text-base text-center md:text-left">
             MASTERED EDUVENTURES LLP <br/>
-            ROOM NO 34/698, PATTELTHAZHAM,<br/>
-            Mankavu, Kozhikode City Town Police Station, Kozhikode,<br/>
-            Kozhikode- 673007, Kerala, India
+            Room No. 35/2145 VK Tower, Valayanadu, Mankavu,<br/>
+            Kozhikode, Kerala, 673007
           </span>
           <span className="text-base mt-1">+91 9778166366</span>
           <span className="text-base">allmasteredskills@gmail.com</span>
